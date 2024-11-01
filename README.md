@@ -53,6 +53,6 @@ Chrome 浏览器
 
 4. 查看内容提炼结果。
 
-  ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/transfromingStatus.png)
+  ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/transformResult.png)
 
 
