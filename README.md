@@ -10,6 +10,8 @@ Chrome 浏览器
 
   github链接：https://github.com/liuwenjin/transwebPlugin/releases
 
+  ![开发者模式](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/transwebRelease.png)
+
 ## 2. Chrome 浏览器打开扩展程序列表界面。
 
    浏览器地址栏输入：chrome://extensions/ ，再按回车键盘。
