@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Transweb 内容提炼工具",
+  "description": "提炼网页内容的要点信息，并生成便于阅读的演示文稿。",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "aiPluginTool.js",
+        "content.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "https://transweb.cn/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
