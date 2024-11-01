@@ -41,6 +41,18 @@ Chrome 浏览器
 
 1. 打开一篇公众号文章， 点击右上角的“内容提炼按钮”。
 
-  ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/openWebPage.png)
+  ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/openWebPage1.png)
 
-2. 点击。
+2. 点击右上角的“内容提炼按钮”。
+
+   ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/openWebPage.png)
+
+3. 等待一会( 60 秒以内)。
+
+  ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/transfromingStatus.png)
+
+4. 查看内容提炼结果。
+
+  ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/transfromingStatus.png)
+
+
