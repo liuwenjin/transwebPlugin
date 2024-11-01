@@ -14,7 +14,7 @@ Chrome 浏览器
 
    浏览器地址栏输入：chrome://extensions/ ，再按回车键盘。
 
-   ![开发者模式](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/inputChromeUrl.jpg)
+   ![开发者模式](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/inputChromeUrl.png)
 
 ## 3. 打开 “开发者模式”。
 
