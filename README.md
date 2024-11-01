@@ -8,7 +8,7 @@ Chrome 浏览器
 
 1. 下载插件的压缩文件，并解压。
 
-  github链接：
+  github链接：https://github.com/liuwenjin/transwebPlugin/releases
 
 2. Chrome 浏览器打开扩展程序列表界面。
 
@@ -55,4 +55,8 @@ Chrome 浏览器
 
   ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/transformResult.png)
 
+5. 选择导出菜单，导出提炼出来的知识卡片。
 
+  ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/exportResultCard.png)
+
+  ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/exportResultCard1.png)
