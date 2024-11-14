@@ -1,4 +1,24 @@
 var aiPluginTool = {};
+aiPluginTool.loadAiService = function(url) {
+  let iframe = document.createElement('iframe');
+  iframe.src = url; // 替换为你要显示的 URL
+  iframe.style.width = '100%'; // 设置宽度
+  iframe.style.height = '100%'; // 设置高度
+  iframe.style.border = 'none'; // 去掉边框
+  iframe.style.position = 'fixed';
+  iframe.style.left = '0px';
+  iframe.style.top = '0px';
+  iframe.style.zIndex = -1000;
+  iframe.style.left = "-9999px";
+  // 将 iframe 添加到 body
+  document.body.appendChild(iframe);
+  this.listenMessage((tData) => {
+    if (tData.data.value === "dismissCurrentService") {
+      this.dismissAiService(iframe);
+    }
+  }, "*");
+  return iframe;
+}
 aiPluginTool.attachAiService = function (elem, url, btnText, callback, style) {
   let switchIcon = {
       show: '<svg style="display: inline-block; vertical-align: middle;" t="1730429381179" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8630" width="10" height="10"><path d="M317.724444 519.774815L157.392593 682.192593c-7.016296 7.111111-18.962963 2.085926-18.962963-7.964445V349.487407c0-10.05037 11.946667-15.075556 18.962963-7.964444l160.237037 162.322963c4.361481 4.456296 4.361481 11.567407 0.094814 15.928889zM885.096296 239.691852H171.899259c-11.757037 0-21.333333-9.576296-21.333333-21.333333s9.576296-21.333333 21.333333-21.333334h713.102222c11.757037 0 21.333333 9.576296 21.333334 21.333334s-9.481481 21.333333-21.238519 21.333333zM885.096296 435.38963H472.841481c-11.757037 0-21.333333-9.576296-21.333333-21.333334s9.576296-21.333333 21.333333-21.333333h412.254815c11.757037 0 21.333333 9.576296 21.333334 21.333333s-9.576296 21.333333-21.333334 21.333334zM885.096296 630.992593H472.841481c-11.757037 0-21.333333-9.576296-21.333333-21.333334s9.576296-21.333333 21.333333-21.333333h412.254815c11.757037 0 21.333333 9.576296 21.333334 21.333333s-9.576296 21.333333-21.333334 21.333334zM885.096296 826.595556H171.899259c-11.757037 0-21.333333-9.576296-21.333333-21.333334s9.576296-21.333333 21.333333-21.333333h713.102222c11.757037 0 21.333333 9.576296 21.333334 21.333333s-9.481481 21.333333-21.238519 21.333334z" p-id="8631" fill="#ffffff"></path></svg>',
@@ -64,10 +84,7 @@ aiPluginTool.attachAiService = function (elem, url, btnText, callback, style) {
 aiPluginTool.activateTask = function (iframe, obj) {
   iframe.style.zIndex = 9999999;
   iframe.style.left = "0px";
-  if(!this.isTransforming) {
-    iframe.contentWindow.postMessage(obj, '*');  
-    this.isTransforming = true;
-  }
+  iframe.contentWindow.postMessage(obj, '*');  
 }
 
 aiPluginTool.dismissAiService = function (iframe) {

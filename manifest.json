@@ -3,9 +3,10 @@
   "name": "Transweb 内容提炼工具",
   "description": "提炼网页内容的要点信息，并生成便于阅读的演示文稿。",
   "version": "1.0",
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab", "storage", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -14,7 +15,8 @@
       "js": [
         "aiPluginTool.js",
         "content.js"
-      ]
+      ],
+      "run_at": "document_idle"
     }
   ],
   "host_permissions": [
