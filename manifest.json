@@ -1,12 +1,31 @@
 {
   "manifest_version": 3,
-  "name": "Transweb 内容提炼工具",
-  "description": "提炼网页内容的要点信息，并生成便于阅读的演示文稿。",
+  "name": "Transweb 提炼知识，辅助学习的工具",
+  "description": "提炼网页内容的要点信息，生成知识卡片、可点亮的知识树(知识点思维导图，可智能出题，通过做题点亮知识点)、知识图谱、抽认卡等，帮助消化理解知识，夯实学习效果。",
   "version": "1.0",
-  "permissions": ["activeTab", "storage", "scripting"],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
   "action": {
     "default_popup": "popup.html"
   },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
   "content_scripts": [
     {
       "matches": [
