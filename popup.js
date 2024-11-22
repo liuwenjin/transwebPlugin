@@ -1,4 +1,4 @@
-let callback = function (appName) {
+let _callback = function (appName) {
   // 获取当前活动的标签页
   chrome.tabs.query({
     active: true,
@@ -12,10 +12,20 @@ let callback = function (appName) {
   });
 }
 
-document.getElementById("ppt").addEventListener("click", (e) => {
-  callback('ppt');
+let callback = function(btn, appName){
+    btn.setAttribute('disabled', true);
+    _callback(appName);
+    setTimeout(()=>{
+      btn.setAttribute('disabled', false);  
+    }, 30000)
+}
+
+document.getElementById("cardNotes").addEventListener("click", (e) => {
+  debugger
+  callback(e.target, "cardNotes");
 });
 
 document.getElementById("knowledgeTree").addEventListener("click", (e) => {
-  callback('knowledgeTree');
+
+  callback(e.target, "knowledgeTree");
 });

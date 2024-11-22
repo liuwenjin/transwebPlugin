@@ -84,7 +84,9 @@ aiPluginTool.attachAiService = function (elem, url, btnText, callback, style) {
 aiPluginTool.activateTask = function (iframe, obj) {
   iframe.style.zIndex = 9999999;
   iframe.style.left = "0px";
-  iframe.contentWindow.postMessage(obj, '*');  
+  if(iframe && iframe.contentWindow && iframe.contentWindow.postMessage) {
+    iframe.contentWindow.postMessage(obj, '*');  
+  }
 }
 
 aiPluginTool.dismissAiService = function (iframe) {
