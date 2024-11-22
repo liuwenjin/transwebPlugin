@@ -43,7 +43,7 @@ Chrome 浏览器
 
 # 如何使用插件
 
-## 1. 打开一篇公众号文章， 点击右上角的“内容提炼按钮”。
+## 1. 打开一篇公众号文章， 地址栏右边的插件按钮。
 
   ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/openWebPage1.png)
 
@@ -59,8 +59,12 @@ Chrome 浏览器
 
   ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/transformResult.png)
 
-## 5. 选择导出菜单，导出提炼出来的知识卡片。
+## 5. 点击导出按钮，导出提炼出来的知识卡片。
 
   ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/exportResultCard.png)
 
   ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/exportResultCard1.png)
+
+## 6. 调整导出样式，点击下载按钮。
+
+  ![点击按钮](https://transweb-1254183942.cos.ap-beijing.myqcloud.com/images/transwebPlugin/downloadResultCard.png)
