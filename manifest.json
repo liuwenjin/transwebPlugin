@@ -1,48 +1,66 @@
 {
-  "manifest_version": 3,
-  "name": "Transweb 辅助学习的智能工具包",
-  "description": "AI 辅助做卡片笔记和抽认卡、一键绘制思维导图、知识图谱等。",
-  "version": "1.0",
-  "permissions": [
-    "activeTab",
-    "storage",
-    "scripting"
-  ],
-  "action": {
-    "default_popup": "popup.html"
-  },
-  "icons": {
-    "16": "images/icon16.png",
-    "48": "images/icon48.png",
-    "128": "images/icon128.png"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "images/*"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
+    "manifest_version": 3,
+    "name": "Transweb 辅助学习的智能工具包",
+    "description": "AI 辅助做卡片笔记和抽认卡、一键绘制思维导图、知识图谱等。",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "options_ui": {
+        "page": "popup.html",
+        "customParams": {
+            "origin": "https://transweb.cn",
+            "agentId": "2681403113",
+            "lang": "zh",
+            "agentList": [{
+                "name": "cardNotes",
+                "buttonLabel": "生成卡片笔记"
+            }, {
+                "name": "knowledgeTree",
+                "buttonLabel": "生成知识树"
+            }, {
+                "name": "smartFlash",
+                "buttonLabel": "生成抽认卡"
+            }]
+        }
+        
+    },
+     "background": {
+        "service_worker": "background.js"
+      },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "web_accessible_resources": [{
+        "resources": [
+            "images/*"
+        ],
+        "matches": [
+            "<all_urls>"
+        ]
+    }],
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "html2canvas.js",
+            "aiPluginTool.js",
+            "content.js"
+        ],
+        "run_at": "document_idle"
+    }],
+    "host_permissions": [
+        "https://transweb.cn/*"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
     }
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "html2canvas.js",
-        "aiPluginTool.js",
-        "content.js"
-      ],
-      "run_at": "document_idle"
-    }
-  ],
-  "host_permissions": [
-    "https://transweb.cn/*"
-  ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
-  }
 }
