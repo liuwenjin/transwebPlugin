@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Transweb 辅助学习的智能工具包",
-    "description": "AI 辅助做卡片笔记和抽认卡、一键绘制思维导图、知识图谱等。",
+    "description": "AI 辅助生成卡片笔记和抽认卡、一键绘制思维导图等。",
     "version": "1.0",
     "permissions": [
         "activeTab",
