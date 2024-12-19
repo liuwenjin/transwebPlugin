@@ -39,6 +39,7 @@ let agentInit = function(arr) {
 
 
 if(customParams.agentList && customParams.agentList.length !== 0) {
+   document.querySelector(".titleItem").innerHTML = manifest.name;
    agentInit(customParams.agentList); 
 }
 else {
